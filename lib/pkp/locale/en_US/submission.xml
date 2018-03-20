@@ -144,6 +144,7 @@
 	<message key="submission.authorBiographies">Authors Info</message>
 	<message key="submission.authorWithAffiliation">{$name}, {$affiliation}</message>
 	<message key="submission.shortAuthor">{$author} et al.</message>
+	<message key="submission.principalContact">Primary Contact</message>
 	<message key="submission.mySubmissions">My Authored</message>
 	<message key="submission.addFile">Upload File</message>
 	<message key="submission.agencies">Agencies</message>

@@ -183,7 +183,7 @@
 	<message key="author.users.contributor.email">Адрес электронной почты</message>
 	<message key="author.users.contributor.role">Роль</message>
 	<message key="author.users.contributor.principalContact">Контактное лицо</message>
-	<message key="author.users.contributor.includeInBrowse">В списки просмотра</message>
+	<message key="author.users.contributor.includeInBrowse">В спискe просмотра</message>
 
 	<!-- Роли -->
 	<message key="grid.roles.currentRoles">Текущие роли</message>

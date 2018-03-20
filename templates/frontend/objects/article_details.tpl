@@ -98,7 +98,7 @@
 							</span>
 							{if $author->getLocalizedAffiliation()}
 								<span class="affiliation">
-									{$author->getLocalizedAffiliation()|escape}{if $authorCountry}, {$authorCountry|escape}{/if}
+									{$author->getLocalizedAffiliation()}{if $authorCountry}, {$authorCountry|escape}{/if}
 								</span>
 							{/if}
 							{if $author->getOrcid()}
@@ -214,12 +214,16 @@
 								<div class="value">
 										{$author->getLocalizedBiography()|strip_unsafe_html}
 										{if $author->getEmail()}
-											<p>e-mail: {$author->getEmail()}</p>
+										{assign var="contact" value=$author->getData('primaryContact')}
+											<div{if $contact eq 1} class="correspond"{else}{/if}> e-mail: {$author->getEmail()}</div>
 										{/if}
 								</div>
 							</div>
 						{/if}
 					{/foreach}
+				<div class="correspond">
+					{translate key="submission.principalContact"}
+				</div>
 				</div>
 			{/if}
 

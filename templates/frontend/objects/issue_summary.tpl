@@ -27,10 +27,11 @@
 	{if $issueYear == '2003'}
 		<h2>{$issueYear|escape}</h2>
 	{/if}
-	{if $issueNum == 4}
-		{if !$issueTitle}
+	{if $issueNum == 4 && !$issueTitle}
 			<h2>{translate key="issue.vol"} {$issueVol|escape}, {$issueYear|escape}</h2>
-		{/if}
+	{/if}
+	{if $issueTitle == 'Часть 3'}
+		<h2>{translate key="issue.vol"} {$issueVol|escape}, {$issueYear|escape}</h2>
 	{/if}
 	<time>
 		{$issue->getDatePublished()|date_format:"%Y/%m/%e"}
