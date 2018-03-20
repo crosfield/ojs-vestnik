@@ -211,7 +211,7 @@ class AuthorForm extends Form {
 		$author->setEmail($this->getData('email'));
 		$author->setUrl($this->getData('userUrl'));
 		$author->setOrcid($this->getData('orcid'));
-		$author->setUserGroupId($this->getData('userGroupId'));
+		$author->setUserGroupId(14);
 		$author->setBiography($this->getData('biography'), null); // localized
 		$author->setPrimaryContact(($this->getData('primaryContact') ? true : false));
 		$author->setIncludeInBrowse(($this->getData('includeInBrowse') ? true : false));

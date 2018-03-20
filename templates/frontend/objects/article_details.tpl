@@ -202,28 +202,30 @@
 						{if $author->getLocalizedBiography()}
 							<div class="sub_item">
 								<div class="label">
-									{if $author->getLocalizedAffiliation()}
+									{* {if $author->getLocalizedAffiliation()} *}
 										{$author->getFullName()|escape}
 										{* {capture assign="authorName"}{$author->getFullName()|escape}{/capture} *}
 										{* {capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedAffiliation()|escape}</span>{/capture} *}
 										{* {translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation} *}
-									{else}
+									{* {else}
 										{$author->getFullName()|escape}
-									{/if}
+									{/if} *}
 								</div>
 								<div class="value">
 										{$author->getLocalizedBiography()|strip_unsafe_html}
 										{if $author->getEmail()}
 										{assign var="contact" value=$author->getData('primaryContact')}
-											<div{if $contact eq 1} class="correspond"{else}{/if}> e-mail: {$author->getEmail()}</div>
+											<div>{if $contact eq 1}{assign var="ifcontact" value=1} <span class="correspond"></span>{/if} e-mail: {$author->getEmail()}</div>
 										{/if}
 								</div>
 							</div>
 						{/if}
 					{/foreach}
-				<div class="correspond">
-					{translate key="submission.principalContact"}
-				</div>
+					{* {if $ifcontact}
+						<div class="correspond">
+							{translate key="submission.principalContact"}
+						</div>
+					{/if} *}
 				</div>
 			{/if}
 
